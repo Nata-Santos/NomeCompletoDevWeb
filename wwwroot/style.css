@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Outfit:wght@200;500&display=swap');
+
+:root{
+    --cor-fundoms: #212f45;
+    --cor-fundo: #cbc0d3;
+
+}
+
+body{
+    font-size: 20px;
+    max-width: 60rem;
+    background-color: var(--cor-fundoms);
+    margin: 0 auto;
+    
+    
+}
+
+
+form{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+    height: 60vh;
+    font-family: outfit;
+    
+}
+
+form > * {
+    margin: 0.25em;
+}
+
+form button{
+    padding: 0.75em;
+    background-color: cornflowerblue;
+    border-radius: 2px solid;
+}
+
+form input{
+    font-size: 1.10em;
+    outline: none;
+    border-radius: 5px;
+}
+
+#mensagem{
+    margin: 2em;
+    color: cornsilk;
+    text-align: center;
+    font-family: kanit;
+}
+
+button{
+    font-size: inherit;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--cor-fundoms);
+    color: var(--cor-fundo);
+}
