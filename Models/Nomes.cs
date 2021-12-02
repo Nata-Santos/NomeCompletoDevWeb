@@ -1,4 +1,4 @@
-namespace aula_25_11.Models
+namespace NomeCompletoDevWeb.Models
 {
     
     public class Nomes

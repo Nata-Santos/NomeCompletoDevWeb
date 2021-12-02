@@ -1,39 +1,30 @@
 const processar = async (event) => {
     event.preventDefault();
 
-    // (ENTRADA)
+    //ENTRADA
     const campoNome = document.querySelector('#nome');
     const campoSobrenome = document.querySelector('#sobrenome');
 
-    const nomeDigitado = campoNome.value;
-    const sobrenomeDigitado = campoSobrenome.value;
+    const nome = campoNome.value;
+    const sobrenome = campoSobrenome.value;
 
-    // (PROCESSAMENTO)
-    // const nomeCompleto = `${nomeDigitado} ${sobrenomeDigitado}`;
-    // const nomeCatalogo = `${sobrenomeDigitado.toUpperCase()}, ${nomeDigitado}`;
+    //PROCESSAMENTO
+    const dadosAEnviar = { nome, sobrenome };
 
-    const dadosAEnviar = {
-        nome: nomeDigitado,
-        sobrenome: sobrenomeDigitado
-    };
-
-    const request = await fetch('/nome', {
+    const response = await fetch('/Nome', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({dadosAEnviar})
+        body: JSON.stringify(dadosAEnviar)
     });
 
     const result = await response.json();
-    console.log(result);
-
     
 
-    const{nomeCompleto, nomeCatalogo} = result;
+    const { nomeCompleto, nomeCatalogo } = result;
 
-
-    // (SAÍDA)
+    // SAÍDA
     const mensagem = document.querySelector('#mensagem');
     mensagem.innerHTML = `
         <div>Nome completo = ${nomeCompleto}</div>

@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace aula_25_11
+namespace NomeCompletoDevWeb
 {
     public class Startup
     {

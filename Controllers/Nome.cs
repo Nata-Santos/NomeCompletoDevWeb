@@ -2,18 +2,18 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 using NomeCompletoDevWeb.Models;
 
-namespace aula_25_11.Controllers
+namespace NomeCompletoDevWeb.Controllers
 {
     [ApiController]
         [Route("[controller]")]
-    public class EscolaController : ControllerBase
+    public class Nome : ControllerBase
     {
         [HttpPost]
         public ActionResult<Nomes> Post(NomeCliente nomeRecebido)
         {
-            var nomeProcessado = new Nomes{
-                NomeCompleto = $"{nomeRecebido.nome}{nomeRecebido.sobrenome}",
-                NomeCatalogo = $"{nomeRecebido.sobrenome.ToUpper()}{nomeRecebido.nome}",
+            var nomeProcessado = new Nomes(){
+                NomeCompleto = $"{nomeRecebido.nome} {nomeRecebido.sobrenome}",
+                NomeCatalogo = $"{nomeRecebido.sobrenome.ToUpper()}, {nomeRecebido.nome}",
 
             };
 

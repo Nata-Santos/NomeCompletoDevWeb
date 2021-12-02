@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>aula_25_11</RootNamespace>
+    <RootNamespace>NomeCompletoDevWeb</RootNamespace>
   </PropertyGroup>
 
 
